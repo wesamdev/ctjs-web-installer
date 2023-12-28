@@ -33,7 +33,7 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller --specpath ctjsWebInstaller.spec
+        pyinstaller start.py --specpath ctjsWebInstaller.spec
       working-directory: ./
 
     - name: Create Artifact (Windows)
