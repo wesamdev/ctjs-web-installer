@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest  # Change to windows-latest for Windows environment
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -20,7 +20,7 @@ jobs:
       run: gulp
 
     - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@v0.1.2
+      uses: JackMcKew/pyinstaller-action-windows@python3-10-pyinstaller-5-3
       with:
         path: './'
         spec: 'ctjsWebInstaller.spec'
