@@ -33,14 +33,14 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller ctjsWebInstaller.spec
+        pyinstaller --onefile ctjsWebInstaller.spec
       working-directory: ./
 
     - name: Create Artifact (Windows)
       uses: actions/upload-artifact@v3
       with:
         name: windows-executables
-        path: /dist/windows/*.exe
+        path: /dist/*.exe
 
     - name: Bump version and push tag
       id: tag_version
@@ -55,4 +55,4 @@ jobs:
         automatic_release_tag: ${{ steps.tag_version.outputs.new_tag }}
         prerelease: false
         files: |
-          ./dist/windows/*.exe
+          ./dist/*.exe
