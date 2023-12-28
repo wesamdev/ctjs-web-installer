@@ -2,12 +2,12 @@ name: Package Application with Pyinstaller
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Change to windows-latest for Windows environment
 
     steps:
 
