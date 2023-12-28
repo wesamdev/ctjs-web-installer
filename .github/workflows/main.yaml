@@ -20,7 +20,7 @@ jobs:
       run: gulp
 
     - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@main
+      uses: JackMcKew/pyinstaller-action-windows@v0.1.2
       with:
         path: './'
         spec: 'ctjsWebInstaller.spec'
