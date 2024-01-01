@@ -15,9 +15,12 @@ jobs:
 
     - name: NPM install & Gulp
       run: npm install
+      working-directory: ./
+
 
     - name: Build assets
       run: gulp
+      working-directory: ./
 
 
     - name: Set up Python
