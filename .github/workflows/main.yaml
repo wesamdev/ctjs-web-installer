@@ -33,7 +33,7 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller ctjsWebInstaller.spec
+        pyinstaller --clean --onefile --windowed --noconfirm --add-data "./assets;/" --icon "./icon.ico" --name "ctjsWebInstaller" start.py
       working-directory: ./
 
     - name: Create Artifact (Windows)
